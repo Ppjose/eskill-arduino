@@ -1,5 +1,8 @@
 'use strict'
 const cote = require('cote')
+//var mySerial = require("./mySerial");
+//mySerial.iniciar(); 
+//const SerialPort = require('serialport');
 
 /*      understand/
  * This is the main entry point where we start.
@@ -52,9 +55,10 @@ function startMicroservice() {
     })
     function rot13(msg) {
         // http://stackoverflow.com/a/617685/987044
-        return msg.replace(/[a-zA-Z]/g, function (c) {
+        return msKey
+        //msg.replace(/[a-zA-Z]/g, function (c) {
             return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-        })
+       // })
     }
 }
 
